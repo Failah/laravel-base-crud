@@ -16,7 +16,13 @@
         <form action="{{ route('comics.destroy', $comic->id) }}" method="POST">
             @csrf
             @method('DELETE')
-            <input type="submit" value="Delete Comic">
+            <input onclick="return confirm('Do you really want to delete this Comic?')" type="submit" value="Delete Comic">
         </form>
     @endforeach
 @endsection
+
+{{-- <script>
+    $(".delete").on("submit", function() {
+        return confirm("Do you want to delete this item?");
+    });
+</script> --}}
