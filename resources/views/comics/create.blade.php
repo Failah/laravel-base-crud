@@ -47,4 +47,6 @@
         </div>
 
     </form>
+
+    <a href="{{ route('comics.index') }}">BACK TO THE COMICS LIST</a>
 @endsection
