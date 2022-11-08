@@ -1,3 +1,9 @@
+<style>
+    form div {
+        margin-top: 20px
+    }
+</style>
+
 @extends('layouts.app')
 
 @section('title')
@@ -20,7 +26,7 @@
             <input type="text" name="thumb">
         </div>
         <div>
-            <label for="price">Price:</label>
+            <label for="price">Price: (use point . not comma , )</label>
             <input type="text" name="price">
         </div>
         <div>
@@ -28,7 +34,7 @@
             <input type="text" name="series">
         </div>
         <div>
-            <label for="sale_date">Sale Date:</label>
+            <label for="sale_date">Sale Date: (YYYY-MM-DD)</label>
             <input type="text" name="sale_date">
         </div>
         <div>
