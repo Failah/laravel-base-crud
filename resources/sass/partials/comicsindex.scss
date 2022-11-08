@@ -1,0 +1,44 @@
+#new-comic {
+    margin-top: 20px;
+}
+
+#new-comic a {
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 5px 10px;
+    text-decoration: none;
+    background-color: lightgreen;
+    color: black;
+}
+
+#comics-list {
+    margin-top: 30px;
+}
+
+.comic-card {
+    border: 2px solid blue;
+    border-radius: 5px;
+    width: 250px;
+    margin: 10px 0px;
+    padding: 5px 10px;
+    background-color: lightblue;
+}
+
+.comic-card>div:first-child a {
+    color: black;
+    text-decoration: none;
+}
+
+#delete-comic {
+    margin-top: 10px;
+}
+
+#delete-comic input {
+    color: black;
+    background-color: rgb(226, 63, 63);
+    cursor: pointer;
+}
+
+.comic-card>div:first-child a:hover {
+    text-decoration: underline;
+}
