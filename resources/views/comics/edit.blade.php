@@ -24,7 +24,7 @@
         </div>
         <div>
             <label for="description">Description:</label>
-            <textarea name="description" cols="30" rows="10" value="{{ old('description', $comic->description) }}"></textarea>
+            <textarea name="description" cols="30" rows="10">{{ old('description', $comic->description) }}</textarea>
         </div>
         <div>
             <label for="thumb">Thumbnail Link:</label>

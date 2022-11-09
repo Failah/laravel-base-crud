@@ -125,10 +125,10 @@ class ComicController extends Controller
     {
 
         $request->validate([
-            'title' => 'required|unique:comics|string|min:5|max:60',
+            'title' => 'required|unique:comics|string|min:3|max:60',
             'thumb' => 'url',
             'series' => 'string|max:50',
-            'description' => 'required'
+            'description' => 'required|min:3'
         ]);
     }
 }
