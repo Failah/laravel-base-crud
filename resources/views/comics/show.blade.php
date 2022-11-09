@@ -17,6 +17,9 @@
     <h4 style="margin-bottom: 60px">
         {{ $comic->price }}
     </h4>
+    <div>
+        <a href="{{ route('comics.edit', $comic->id) }}">Edit Comic's Infos</a>
+    </div>
 
     <a href="{{ route('comics.index') }}">BACK TO THE COMICS LIST</a>
 @endsection
