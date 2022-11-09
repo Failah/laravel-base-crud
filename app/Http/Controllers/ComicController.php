@@ -39,6 +39,8 @@ class ComicController extends Controller
     public function store(Request $request)
     {
         //
+        $this->validateRequest($request);
+
         $data = $request->all();
 
         $addComic = new Comic();
@@ -89,6 +91,8 @@ class ComicController extends Controller
     public function update(Request $request, Comic $comic)
     {
         //
+        $this->validateRequest($request);
+
         $data = $request->all();
 
         $comic->update($data);
@@ -115,5 +119,16 @@ class ComicController extends Controller
         //
         $comic->delete();
         return redirect()->route('comics.index');
+    }
+
+    private function validateRequest(Request $request)
+    {
+
+        $request->validate([
+            'title' => 'required|unique:comics|string|min:5|max:60',
+            'thumb' => 'url',
+            'series' => 'string|max:50',
+            'description' => 'required'
+        ]);
     }
 }

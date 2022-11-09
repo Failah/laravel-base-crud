@@ -5,6 +5,16 @@
 @endsection
 
 @section('content')
+    @if ($errors->any())
+        <h2>Form errors: please fill all spaces correctly!</h2>
+        <div class="alert alert-danger">
+            <ul>
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+    @endif
     <form method="POST" action="{{ route('comics.update', $comic->id) }}">
         @csrf
         @method('PUT')
